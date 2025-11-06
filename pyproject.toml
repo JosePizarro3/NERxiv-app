@@ -39,6 +39,7 @@ dev = [
   "pytest",
   "pytest-timeout",
   "pytest-cov",
+  "python-decouple",
 ]
 
 [tool.ruff]
@@ -53,6 +54,7 @@ exclude = [
     ".hg",
     ".mypy_cache",
     ".nox",
+    ".pants.d",
     ".pytype",
     ".ruff_cache",
     ".svn",
@@ -65,6 +67,8 @@ exclude = [
     "dist",
     "node_modules",
     "venv",
+    "dependencies",
+    "tutorials",
 ]
 # Same as Black.
 line-length = 88
@@ -97,7 +101,7 @@ ignore = [
 fixable = ["ALL"]
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
-
+# this is entirely optional, you can remove this if you wish to
 [tool.ruff.format]
 # use double quotes for strings.
 quote-style = "double"
