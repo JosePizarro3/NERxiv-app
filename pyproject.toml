@@ -26,6 +26,15 @@ maintainers = [
 license = { file = "LICENSE" }
 dependencies = [
   "nerxiv>=0.1.0",
+  "fastapi>=0.104.0",
+  "pydantic>=2.0.0",
+  "pydantic-settings>=2.0.0",
+  "motor>=3.3.0",
+  "ollama>=0.1.0",
+  "PyMuPDF>=1.23.0",
+  "pdfminer.six>=20221105",
+  "uvicorn[standard]>=0.24.0",
+  "python-multipart>=0.0.6",
 ]
 
 [project.urls]
