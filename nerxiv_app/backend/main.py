@@ -22,7 +22,11 @@ app.add_middleware(
 @app.get("/")
 async def root():
     """Root endpoint."""
-    return {"message": "Welcome to NERxiv API"}
+    return {
+        "message": "Welcome to NERxiv API",
+        "version": "0.1.0",
+        "docs": "/docs",
+    }
 
 
 @app.get("/health")

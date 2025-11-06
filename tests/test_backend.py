@@ -11,7 +11,10 @@ def test_root_endpoint():
     """Test the root endpoint."""
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Welcome to NERxiv API"}
+    data = response.json()
+    assert data["message"] == "Welcome to NERxiv API"
+    assert data["version"] == "0.1.0"
+    assert data["docs"] == "/docs"
 
 
 def test_health_endpoint():
