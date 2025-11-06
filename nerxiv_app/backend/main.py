@@ -3,10 +3,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from nerxiv_app._version import __version__
+
 app = FastAPI(
     title="NERxiv API",
     description="API for NERxiv LLM RAG extractor agent",
-    version="0.1.0",
+    version=__version__,
 )
 
 # Configure CORS for React frontend
@@ -24,7 +26,7 @@ async def root():
     """Root endpoint."""
     return {
         "message": "Welcome to NERxiv API",
-        "version": "0.1.0",
+        "version": __version__,
         "docs": "/docs",
     }
 
